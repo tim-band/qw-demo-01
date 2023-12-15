@@ -10,7 +10,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: Describe the design input
+      description: Describe the requirement
       placeholder: Specific requirement information
     validations:
       required: true
