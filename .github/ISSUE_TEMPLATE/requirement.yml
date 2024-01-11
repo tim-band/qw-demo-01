@@ -1,0 +1,58 @@
+name: Requirement
+description: Create a requirement
+labels: ["qw-requirement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Let's add a new requirement to the project
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the requirement
+      placeholder: Specific requirement information
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component does this relate to?
+      options:
+        - System
+    validations:
+      required: true
+  - type: dropdown
+    id: requirement-type
+    attributes:
+      label: Type of requirement
+      description: What is classification of the requirement?
+      options:
+        - Functional
+        - System inputs and outputs
+        - Application programming interface
+        - Alarms and warnings
+        - Security
+        - User interface
+        - Data definition and database
+        - Installation and acceptance
+        - Operation methods and maintenance
+        - Networking
+        - User maintenance
+        - Regulatory
+    validations:
+      required: true
+  - type: textarea
+    id: user-need
+    attributes:
+      label: Parent user need
+      description: Enter the User need github issue number that the requirement contributes to, in the form `#1`
+      placeholder: "#1"
+    validations:
+      required: true
+  - type: textarea
+    id: other-information
+    attributes:
+      label: Other information
+      description: Any other information, ignored by the QW tool

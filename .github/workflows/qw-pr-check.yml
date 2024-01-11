@@ -1,0 +1,32 @@
+name: QW PR Check
+# Checks to see if a PR can be parsed by qw, and any outstanding problems with it.
+# If problems are found, the action will fail and give an error message of the problems found
+
+on:
+  pull_request:
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  qw-check-pr:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: Checkout qw
+        uses: actions/checkout@v3
+        with:
+          repository: tim-band/qw
+          ref: config-release-docs
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install .
+      - name: qw check
+        # if labelled qw-ignore, then job will always pass
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'qw-ignore') }}
+        id: qw
+        run: |
+          qw check --review-request ${{ github.event.pull_request.number }}  --repository ${{ github.repositoryURL }} --token ${{ secrets.GITHUB_TOKEN }}
