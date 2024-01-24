@@ -1,0 +1,53 @@
+[
+  {
+    "description": "The doctor needs to be able to set the dose in ml.",
+    "internal_id": 1,
+    "remote_item_type": "issue",
+    "requirement": null,
+    "stage": "user-need",
+    "title": "Set the dose",
+    "version": 1
+  },
+  {
+    "description": "When in place the device should deliver the dose that the doctor entered.",
+    "internal_id": 2,
+    "remote_item_type": "issue",
+    "requirement": null,
+    "stage": "user-need",
+    "title": "Deliver the correct dose",
+    "version": 1
+  },
+  {
+    "component": "System",
+    "description": "Doctor enters the dose on the keypad.",
+    "internal_id": 3,
+    "remote_item_type": "issue",
+    "req_type": "Functional",
+    "stage": "requirement",
+    "title": "Keypad entry",
+    "user_need": "#1",
+    "version": 1
+  },
+  {
+    "component": "System",
+    "description": "Deliver the dose",
+    "internal_id": 4,
+    "remote_item_type": "issue",
+    "req_type": "Functional",
+    "stage": "requirement",
+    "title": "Plunger control",
+    "user_need": "#2",
+    "version": 1
+  },
+  {
+    "component": "System",
+    "description": "Make the entered dose visible on the display",
+    "internal_id": 5,
+    "remote_item_type": "issue",
+    "req_type": "Functional",
+    "stage": "requirement",
+    "title": "Display entered dose",
+    "user_need": "#1\n#2",
+    "version": 1
+  }
+]
