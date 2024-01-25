@@ -49,5 +49,17 @@
     "title": "Display entered dose",
     "user_need": "#1\n#2",
     "version": 1
+  },
+  {
+    "closing_issues": [
+      4
+    ],
+    "description": "Plunger control functionality!",
+    "internal_id": 8,
+    "remote_item_type": "request",
+    "requirement": null,
+    "stage": "design-output",
+    "title": "Added plunger",
+    "version": 1
   }
 ]
