@@ -30,14 +30,14 @@
   },
   {
     "component": "System",
-    "description": "Deliver the dose",
+    "description": "Deliver the specified dose",
     "internal_id": 4,
     "remote_item_type": "issue",
     "req_type": "Functional",
     "stage": "requirement",
     "title": "Plunger control",
     "user_need": "#2",
-    "version": 1
+    "version": 2
   },
   {
     "component": "System",
@@ -54,12 +54,12 @@
     "closing_issues": [
       4
     ],
-    "description": "Plunger control functionality!",
+    "description": "Plunger control functionality.\nPushes the plunger in, and let's us extract it too.",
     "internal_id": 8,
     "remote_item_type": "request",
     "requirement": null,
     "stage": "design-output",
     "title": "Added plunger",
-    "version": 1
+    "version": 2
   }
 ]
